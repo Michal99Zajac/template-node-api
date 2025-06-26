@@ -1,0 +1,7 @@
+timeout: 60
+node-arg:
+  - --env-file=.env.test
+before: tests/_/lifecycle/before.ts
+files:
+  - tests/**/*.test.ts
+jobs: 1

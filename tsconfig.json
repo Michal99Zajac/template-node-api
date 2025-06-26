@@ -12,9 +12,9 @@
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": false,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     },
 
     /* Strictness */
@@ -34,5 +34,5 @@
     "types": ["@types/node"],
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"]
+  "include": ["src", "tests"]
 }

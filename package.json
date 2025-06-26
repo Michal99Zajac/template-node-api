@@ -5,11 +5,11 @@
   "main": "dist/index.js",
   "private": true,
   "scripts": {
-    "build": "tsc && tsc-alias",
+    "build": "tsc -p tsconfig.prod.json && tsc-alias",
     "start": "node dist/index.js",
-    "dev": "tsx --watch src/index.ts",
+    "dev": "tsx --watch --env-file=.env src/index.ts",
     "prepare": "husky",
-    "test": "echo \"Testes are not implemented\" && exit 0"
+    "test": "tap"
   },
   "dependencies": {
     "@types/node": "^22.15.17"
@@ -17,20 +17,22 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@eslint/js": "^9.26.0",
+    "@eslint/js": "^9.29.0",
     "@release-it/conventional-changelog": "^10.0.1",
-    "eslint": "^9.26.0",
+    "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "globals": "^16.1.0",
+    "globals": "^16.2.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.2",
-    "prettier": "^3.5.3",
-    "release-it": "^19.0.2",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.1",
+    "release-it": "^19.0.3",
+    "tap": "^21.1.0",
     "tsc-alias": "^1.8.16",
-    "tsx": "^4.19.4",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.32.0"
+    "typescript-eslint": "^8.35.0"
   }
 }
